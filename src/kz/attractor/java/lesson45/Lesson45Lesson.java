@@ -1,4 +1,4 @@
-package kz.attractor.java.lesson44;
+package kz.attractor.java.lesson45;
 
 import com.sun.net.httpserver.HttpExchange;
 import kz.attractor.java.server.ContentType;
