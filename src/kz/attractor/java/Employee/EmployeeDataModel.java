@@ -30,6 +30,16 @@ public class EmployeeDataModel {
         }        return GSON.fromJson(json, new TypeToken<List<Employee>>() {}.getType());
     }
 
+    public static void writeEmployersFile(List<Employee> employeeList){
+        String str = GSON.toJson(employeeList);
+        try {
+            byte[] strToBytes = str.getBytes();
+            Files.write(PATH, strToBytes);
+        }catch (IOException e){
+            e.printStackTrace();        }
+    }
+
+
     public List<Employee> getEmployees() {
         return employees;
     }
@@ -45,4 +55,5 @@ public class EmployeeDataModel {
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
+
 }

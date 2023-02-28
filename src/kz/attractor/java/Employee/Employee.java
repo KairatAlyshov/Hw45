@@ -7,13 +7,23 @@ public class Employee {
     private String name;
     private String surname;
     private String email;
+    private String password;
     private List<Book> reading;
     private List<Book> read;
 
-    public Employee(String name, String surname, String email) {
+    public Employee(String name, String surname, String email, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
